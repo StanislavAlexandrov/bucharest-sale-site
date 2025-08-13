@@ -7,6 +7,11 @@ import nespressoImageUrl from '/src/assets/nespresso.webp';
 import steamerImageUrl from '/src/assets/steamer.webp';
 import fanImageUrl from '/src/assets/fan.jpg';
 import printerImageUrl from '/src/assets/printer.avif';
+import ironImageUrl from '/src/assets/iron.avif';
+import humidifierImageUrl from '/src/assets/humidifier.webp';
+import jewelryCleanerImageUrl from '/src/assets/jewelryCleaner.webp';
+import irobotImageUrl from '/src/assets/irobot.webp';
+import blenderImageUrl from '/src/assets/blender.jpg';
 
 export type Item = {
     id: number;
@@ -28,7 +33,7 @@ const items: Item[] = [
         price: '$2313',
         originalPrice: '$3005',
         condition: 'Very good',
-        image: chairImageUrl, // Placeholder - replace with actual image URL
+        image: chairImageUrl,
         available: true,
         link: 'https://www.komoder.com/marina-medical-2-massage-chair',
     },
@@ -39,7 +44,7 @@ const items: Item[] = [
         price: '$81',
         originalPrice: '$93',
         condition: 'Very good',
-        image: heaterImageUrl, // Placeholder
+        image: heaterImageUrl,
         available: true,
         link: '',
     },
@@ -50,7 +55,7 @@ const items: Item[] = [
         price: '$100',
         originalPrice: '$227',
         condition: 'Good',
-        image: printerImageUrl, // Placeholder
+        image: printerImageUrl,
         available: true,
         link: 'https://www.emag.ro/imprimanta-laser-color-hp-laserjet-pro-m254dw-wireless-a4-t6b60a/pd/DWDCX0BBM/',
     },
@@ -58,10 +63,10 @@ const items: Item[] = [
         id: 4,
         title: 'Toaster',
         description: 'Bosch TAT6A913',
-        price: '$0',
-        originalPrice: '$0',
+        price: '$35',
+        originalPrice: '$75',
         condition: 'Good',
-        image: toasterImageUrl, // Placeholder
+        image: toasterImageUrl,
         available: true,
         link: 'https://www.flanco.ro/prajitor-de-paine-bosch-comfortline-tat6a913-1090-w-2-felii-argintiu-negru.html',
     },
@@ -72,7 +77,7 @@ const items: Item[] = [
         price: '$1041',
         originalPrice: '$1538',
         condition: 'Excellent',
-        image: tvImageUrl, // Placeholder
+        image: tvImageUrl,
         available: true,
         link: 'https://www.emag.ro/televizor-samsung-qled-75q70d-189-cm-smart-4k-ultra-hd-100-hz-clasa-d-qe75q70datxxh/pd/DCQSSPYBM/',
     },
@@ -80,10 +85,10 @@ const items: Item[] = [
         id: 6,
         title: 'Humidifier+filters',
         description: 'LEVOIT Dual 150 Ultrasonic',
-        price: '$0',
+        price: '$30',
         originalPrice: '$52',
         condition: 'Excellent',
-        image: 'humidifierImageUrl', // Placeholder
+        image: humidifierImageUrl,
         available: true,
         link: 'https://www.emag.ro/umidificator-de-aer-levoit-dual-150-ultrasonic-rezervor-3l-silentios-aromaterapie-autonomie-25-ore-dual150/pd/D7JMH1MBM/',
     },
@@ -91,10 +96,10 @@ const items: Item[] = [
         id: 7,
         title: 'Nespresso',
         description: "De'Longhi Inissia Black Nespresso",
-        price: '$0',
+        price: '$70',
         originalPrice: '$103',
         condition: 'Good',
-        image: nespressoImageUrl, // Placeholder
+        image: nespressoImageUrl,
         available: true,
         link: 'https://www.emag.ro/espressor-nespresso-by-de-longhi-inissia-black-19-bari-1260-w-negru-set-capsule-degustare-inclus-d40-eu-bk-ne3/pd/DBPL9FBBM/',
     },
@@ -105,7 +110,7 @@ const items: Item[] = [
         price: '$28',
         originalPrice: '$35',
         condition: 'Excellent',
-        image: fanImageUrl, // Placeholder
+        image: fanImageUrl,
         available: true,
         link: 'https://www.emag.ro/ventilator-cu-picior-daewoo-ddv166-50-w-40-cm-3-trepte-de-putere-inaltime-reglabila-pana-la-125-cm-gril-frontal-de-protectie-oscilare-la-90-grade-baza-stabila-negru-orange-ddv166/pd/D3449JMBM/',
     },
@@ -116,18 +121,18 @@ const items: Item[] = [
         price: '$46',
         originalPrice: '$68',
         condition: 'Excellent',
-        image: 'ironImageUrl', // Placeholder
+        image: ironImageUrl,
         available: true,
         link: 'https://www.emag.ro/fier-de-calcat-philips-azur-dst7041-20-2800w-debit-de-abur-continuu-de-50g-min-si-jet-de-abur-de-250-g-talpa-steamglide-elite-rezervor-de-300ml-si-sistem-de-curatare-automata-cu-rezervor-integrat-pentru-calcar-oprire-automata-de-siguranta-albastru-dst7041-20/pd/D3R09JMBM/',
     },
     {
         id: 10,
-        title: 'Jewerly Cleaner',
+        title: 'Jewelry Cleaner',
         description: 'Ultrasonic cleaner 600ml',
         price: '$42',
         originalPrice: '$52',
         condition: 'Excellent',
-        image: 'jewerlyCleanerImageUrl', // Placeholder
+        image: jewelryCleanerImageUrl,
         available: true,
         link: 'https://www.emag.ro/cleaner-curatator-ultrasonic-600ml-guc601-curatare-bijuterii-ceasuri-rezistente-la-apa-si-diverse-articole-rezistente-la-apa-cos-de-plastic-si-suport-pentru-ceasuri-inclus-guc601/pd/D3V09JMBM/',
     },
@@ -135,10 +140,10 @@ const items: Item[] = [
         id: 11,
         title: 'iRobot',
         description: 'Roomba 985 (980 Costco model)',
-        price: '$0',
+        price: '$300',
         originalPrice: '$499',
         condition: 'Good',
-        image: 'irobotImageUrl', // Placeholder
+        image: irobotImageUrl,
         available: true,
         link: '',
     },
@@ -149,7 +154,7 @@ const items: Item[] = [
         price: '$208',
         originalPrice: '$342',
         condition: 'Very good',
-        image: steamerImageUrl, // Placeholder
+        image: steamerImageUrl,
         available: true,
         link: 'https://www.emag.ro/aparat-de-calcat-vertical-philips-all-in-one-aio-seria-8000-2200w-tehnologie-de-incalzire-dubla-placa-incalzita-optimaltemp-6-bar-boost-de-abur-90-g-placa-de-calcat-cu-reglaj-in-mai-multe-unghiuri-5-s/pd/D4609JMBM/',
     },
@@ -160,9 +165,20 @@ const items: Item[] = [
         price: '$93',
         originalPrice: '$131',
         condition: 'Excellent',
-        image: airPurifierImageUrl, // Placeholder
+        image: airPurifierImageUrl,
         available: true,
         link: 'https://www.emag.ro/purificator-de-aer-levoit-core-300-true-hepa-carbon-activ-super-silent-ozone-free-3-trepte-de-viteza-panou-comanda-touch-screen-core300rac/pd/D4LSN3MBM/',
+    },
+    {
+        id: 14,
+        title: 'Blender',
+        description: 'Philips HR3652/00 Avance Collection',
+        price: '$100',
+        originalPrice: '$150',
+        condition: 'Excellent',
+        image: blenderImageUrl,
+        available: false,
+        link: 'https://www.emag.ro/blender-philips-hr3652-00-avance-collection-1400w-2l-sticla-4-trepte-de-viteza-5-program-de-mixare-albastru-hr3652-00/pd/D3V09JMBM/',
     },
 ];
 
