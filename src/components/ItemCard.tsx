@@ -20,7 +20,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
 
             <h2 className="text-xl font-semibold mt-2">{item.title}</h2>
             <p>{item.description}</p>
-            <p>{item.condition}</p>
+            <p>Condition: {item.condition}</p>
             <p className="text-green-600 font-bold">{item.price}</p>
             <p className="text-gray-500 text-sm">
                 Original price: {item.originalPrice || 'N/A'}
