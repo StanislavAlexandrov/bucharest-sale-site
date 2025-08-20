@@ -13,6 +13,7 @@ import jewelryCleanerImageUrl from '/src/assets/jewelryCleaner.webp';
 import irobotImageUrl from '/src/assets/irobot.webp';
 import blenderImageUrl from '/src/assets/blender.jpg';
 import sofaImageUrl from '/src/assets/sofa.avif';
+import monitorImageUrl from '/src/assets/monitor.webp';
 
 export type Item = {
     id: number;
@@ -190,6 +191,17 @@ const items: Item[] = [
         condition: 'Very good',
         image: sofaImageUrl,
         available: true,
+    },
+    {
+        id: 16,
+        title: 'TWO Dell Computer Monitors with boxes',
+        description: 'Dell IPS Full HD 24 inch 165Hz G2422HS',
+        price: '$125 (550 RON) for one',
+        originalPrice: '$200 (900 RON)',
+        condition: 'Very good',
+        image: monitorImageUrl,
+        available: true,
+        link: 'https://www.emag.ro/monitor-gaming-led-ips-dell-23-8-full-hd-165hz-displayport-negru-g2422hs/pd/D9N9HJMBM/',
     },
 ];
 
