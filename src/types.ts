@@ -3,8 +3,9 @@ export type Item = {
     title: string;
     description: string;
     price: string;
-    image: string; // e.g. "/images/toaster.jpg";
-    originalPrice?: string; // Optional for items on sale
+    image: string; // imported asset path resolves to a string
     available: boolean;
-    condition?: string; // Optional for additional item details
+    originalPrice?: string; // optional sale price
+    condition?: string; // optional condition
+    link?: string; // optional external URL
 };

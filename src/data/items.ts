@@ -14,6 +14,8 @@ import irobotImageUrl from '/src/assets/irobot.webp';
 import blenderImageUrl from '/src/assets/blender.jpg';
 import sofaImageUrl from '/src/assets/sofa.avif';
 import monitorImageUrl from '/src/assets/monitor.webp';
+import pressureWasherImageUrl from '/src/assets/pressureWasher.avif';
+import macbookImageUrl from '/src/assets/macbook.jpg';
 
 export type Item = {
     id: number;
@@ -58,7 +60,7 @@ const items: Item[] = [
         originalPrice: '$227 (980 RON)',
         condition: 'Good',
         image: printerImageUrl,
-        available: true,
+        available: false,
         link: 'https://www.emag.ro/imprimanta-laser-color-hp-laserjet-pro-m254dw-wireless-a4-t6b60a/pd/DWDCX0BBM/',
     },
     {
@@ -74,7 +76,7 @@ const items: Item[] = [
     },
     {
         id: 5,
-        title: 'TV',
+        title: '75" Samsung QLED TV, eMag warranty',
         description: 'SAMSUNG QLED 75Q70D TV 189 cm',
         price: '$1040 (4500 RON)',
         originalPrice: '$1538 (6700 RON)',
@@ -114,7 +116,7 @@ const items: Item[] = [
         condition: 'Excellent',
         image: fanImageUrl,
         available: true,
-        link: 'https://www.emag.ro/ventilator-cu-picior-daewoo-ddv166-50-w-40-cm-3-trepte-de-putere-inaltime-reglabila-pana-la-125-cm-gril-frontal-de-protectie-oscilare-la-90-grade-baza-stabila-negru-orange-ddv166/pd/D3449JMBM/',
+        link: 'https://www.emag.ro/ventilator-cu-picior-daewoo-50-w-40-cm-3-trepte-de-putere-inaltime-reglabila-pana-la-125-cm-gril-frontal-de-protectie-oscilare-la-90-grade-baza-stabila-negru-orange-ddv166/pd/D9553YMBM/',
     },
     {
         id: 9,
@@ -125,7 +127,7 @@ const items: Item[] = [
         condition: 'Excellent',
         image: ironImageUrl,
         available: true,
-        link: 'https://www.emag.ro/fier-de-calcat-philips-azur-dst7041-20-2800w-debit-de-abur-continuu-de-50g-min-si-jet-de-abur-de-250-g-talpa-steamglide-elite-rezervor-de-300ml-si-sistem-de-curatare-automata-cu-rezervor-integrat-pentru-calcar-oprire-automata-de-siguranta-albastru-dst7041-20/pd/D3R09JMBM/',
+        link: 'https://www.emag.ro/fier-de-calcat-philips-azur-2800w-debit-de-abur-continuu-de-50g-min-si-jet-de-abur-de-250-g-talpa-steamglide-elite-rezervor-de-300ml-si-sistem-de-curatare-automata-cu-rezervor-integrat-pentru-calcar-o/pd/DN6P06MBM/',
     },
     {
         id: 10,
@@ -136,7 +138,7 @@ const items: Item[] = [
         condition: 'Excellent',
         image: jewelryCleanerImageUrl,
         available: true,
-        link: 'https://www.emag.ro/cleaner-curatator-ultrasonic-600ml-guc601-curatare-bijuterii-ceasuri-rezistente-la-apa-si-diverse-articole-rezistente-la-apa-cos-de-plastic-si-suport-pentru-ceasuri-inclus-guc601/pd/D3V09JMBM/',
+        link: 'https://www.emag.ro/cleaner-curatator-ultrasonic-600ml-curatare-bijuterii-ceasuri-rezistente-la-apa-si-diverse-articole-rezistente-la-apa-cos-de-plastic-si-suport-pentru-ceasuri-inclus-guc601/pd/D5Z5K6BBM/',
     },
     {
         id: 11,
@@ -196,12 +198,34 @@ const items: Item[] = [
         id: 16,
         title: 'TWO Dell Computer Monitors with boxes',
         description: 'Dell IPS Full HD 24 inch 165Hz G2422HS',
-        price: '$125 (550 RON) for one',
-        originalPrice: '$200 (900 RON)',
+        price: '$125 (550RON) for one, $230 (1000RON) for both',
+        originalPrice: '$200 (900RON) for one',
         condition: 'Very good',
         image: monitorImageUrl,
-        available: true,
+        available: false,
         link: 'https://www.emag.ro/monitor-gaming-led-ips-dell-23-8-full-hd-165hz-displayport-negru-g2422hs/pd/D9N9HJMBM/',
+    },
+    {
+        id: 17,
+        title: 'Steinhaus Pressure Washer 1400W 110bar, eMag warranty',
+        description:
+            'Steinhaus PRO-HPC14N pressure washer, 1400 W, 110bar, 306l/h, 5m hose',
+        price: '$50 (270 RON)',
+        originalPrice: '$63 (220 RON)',
+        condition: 'Excellent',
+        image: pressureWasherImageUrl,
+        available: true,
+        link: 'https://www.emag.ro/aparat-de-spalat-cu-presiune-steinhaus-pro-hpc14n-1400-w-110bar-306l-h-furtun-presiune-5-m-5949129051881/pd/DCTR5XYBM/',
+    },
+    {
+        id: 18,
+        title: 'Macbook Air M3',
+        description: 'Macbook Air M3, 256GB SSD, 13-inch, Silver',
+        price: '$900 (3900 RON)',
+        originalPrice: '$1298.89 (5600 RON)',
+        condition: 'Like new',
+        image: macbookImageUrl,
+        available: true,
     },
 ];
 
