@@ -16,6 +16,7 @@ import sofaImageUrl from '/src/assets/sofa.avif';
 import monitorImageUrl from '/src/assets/monitor.webp';
 import pressureWasherImageUrl from '/src/assets/pressureWasher.avif';
 import macbookImageUrl from '/src/assets/macbook.jpg';
+import extinguisherImageUrl from '/src/assets/extinguisher.jpg';
 
 export type Item = {
     id: number;
@@ -27,6 +28,7 @@ export type Item = {
     image: string;
     available: boolean;
     link?: string; // Optional link for more details
+    reserved?: boolean;
 };
 
 const items: Item[] = [
@@ -71,7 +73,7 @@ const items: Item[] = [
         originalPrice: '$75 (320 RON)',
         condition: 'Good',
         image: toasterImageUrl,
-        available: true,
+        available: false,
         link: 'https://www.flanco.ro/prajitor-de-paine-bosch-comfortline-tat6a913-1090-w-2-felii-argintiu-negru.html',
     },
     {
@@ -93,7 +95,8 @@ const items: Item[] = [
         originalPrice: '$52 (230 RON)',
         condition: 'Excellent',
         image: humidifierImageUrl,
-        available: true,
+        available: false,
+
         link: 'https://www.emag.ro/umidificator-de-aer-levoit-dual-150-ultrasonic-rezervor-3l-silentios-aromaterapie-autonomie-25-ore-dual150/pd/D7JMH1MBM/',
     },
     {
@@ -160,6 +163,7 @@ const items: Item[] = [
         condition: 'Very good',
         image: steamerImageUrl,
         available: true,
+        reserved: true,
         link: 'https://www.emag.ro/aparat-de-calcat-vertical-philips-all-in-one-aio-seria-8000-2200w-tehnologie-de-incalzire-dubla-placa-incalzita-optimaltemp-6-bar-boost-de-abur-90-g-placa-de-calcat-cu-reglaj-in-mai-multe-unghiuri-5-s/pd/D4609JMBM/',
     },
     {
@@ -226,6 +230,17 @@ const items: Item[] = [
         condition: 'Like new',
         image: macbookImageUrl,
         available: true,
+    },
+    {
+        id: 19,
+        title: 'Fire Extinguisher',
+        description: '2kg Fire Extinguisher',
+        price: '$10 (40 RON)',
+        originalPrice: '$20 (80 RON)',
+        condition: 'New',
+        image: extinguisherImageUrl,
+        available: true,
+        link: 'https://www.emag.ro/stingator-presurizat-eurosting-cu-pulbere-tip-p2-2-kg-5946610000021/pd/D8TCX7BBM/',
     },
 ];
 

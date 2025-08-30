@@ -6,9 +6,13 @@ import './App.css';
 function App() {
     const [showAvailableOnly, setShowAvailableOnly] = useState(false);
 
-    const filteredItems = showAvailableOnly
-        ? items.filter((item) => item.available)
-        : items;
+    const filteredItems = (
+        showAvailableOnly ? items.filter((item) => item.available) : items
+    ).sort((a, b) => {
+        // Available first, sold last
+        if (a.available === b.available) return 0;
+        return a.available ? -1 : 1;
+    });
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-gray-100 text-center px-4">

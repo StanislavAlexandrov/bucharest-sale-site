@@ -7,5 +7,6 @@ export type Item = {
     available: boolean;
     originalPrice?: string; // optional sale price
     condition?: string; // optional condition
+    reserved?: boolean; // optional reservation status
     link?: string; // optional external URL
 };

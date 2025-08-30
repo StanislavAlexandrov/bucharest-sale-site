@@ -39,6 +39,15 @@ const ItemCard = ({ item }: ItemCardProps) => {
                         Sold
                     </span>
                 )}
+
+                {!isSold && item.reserved && (
+                    <span
+                        className="absolute left-2 top-2 rounded bg-yellow-500/90 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white"
+                        aria-label="Reserved"
+                    >
+                        Reserved
+                    </span>
+                )}
             </div>
 
             {/* Title (linked if we have a URL) */}
