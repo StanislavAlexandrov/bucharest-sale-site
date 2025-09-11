@@ -129,7 +129,7 @@ const items: Item[] = [
         originalPrice: '$68 (290 RON)',
         condition: 'Excellent',
         image: ironImageUrl,
-        available: true,
+        available: false,
         link: 'https://www.emag.ro/fier-de-calcat-philips-azur-2800w-debit-de-abur-continuu-de-50g-min-si-jet-de-abur-de-250-g-talpa-steamglide-elite-rezervor-de-300ml-si-sistem-de-curatare-automata-cu-rezervor-integrat-pentru-calcar-o/pd/DN6P06MBM/',
     },
     {
@@ -162,8 +162,8 @@ const items: Item[] = [
         originalPrice: '$342 (1500 RON)',
         condition: 'Very good',
         image: steamerImageUrl,
-        available: true,
-        reserved: true,
+        available: false,
+        reserved: false,
         link: 'https://www.emag.ro/aparat-de-calcat-vertical-philips-all-in-one-aio-seria-8000-2200w-tehnologie-de-incalzire-dubla-placa-incalzita-optimaltemp-6-bar-boost-de-abur-90-g-placa-de-calcat-cu-reglaj-in-mai-multe-unghiuri-5-s/pd/D4609JMBM/',
     },
     {

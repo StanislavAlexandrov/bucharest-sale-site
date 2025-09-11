@@ -3,20 +3,21 @@ import { Item } from '../types';
 
 type ItemCardProps = {
     item: Item;
+    salesClosed?: boolean;
 };
 
-const ItemCard = ({ item }: ItemCardProps) => {
+const ItemCard = ({ item, salesClosed = false }: ItemCardProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const isSold = !item.available;
+    const disableInteractions = salesClosed || isSold;
 
-    // only allow opening the modal if the item isn't sold (optional; remove if you want it clickable anyway)
     const handleImageClick = () => {
-        if (!isSold) setIsOpen(true);
+        if (!disableInteractions) setIsOpen(true);
     };
 
     return (
-        <div className="border rounded p-4">
-            {/* Thumbnail + SOLD overlay */}
+        <div className="border rounded p-4 bg-white shadow-sm relative">
+            {/* Thumbnail + overlays */}
             <div className="relative">
                 <img
                     src={item.image}
@@ -24,13 +25,23 @@ const ItemCard = ({ item }: ItemCardProps) => {
                     loading="lazy"
                     onClick={handleImageClick}
                     className={[
-                        'w-full h-48 object-cover cursor-pointer transition',
-                        isSold
+                        'w-full h-48 object-cover transition',
+                        disableInteractions
                             ? 'grayscale opacity-60 cursor-not-allowed'
-                            : 'hover:opacity-90',
+                            : 'cursor-pointer hover:opacity-90',
                     ].join(' ')}
+                    aria-disabled={disableInteractions}
+                    tabIndex={disableInteractions ? -1 : 0}
+                    title={
+                        salesClosed
+                            ? 'Sale closed — viewing only'
+                            : isSold
+                            ? 'Sold'
+                            : 'Click to enlarge'
+                    }
                 />
 
+                {/* Priority: SOLD > RESERVED; also show SALE CLOSED ribbon if globally closed */}
                 {isSold && (
                     <span
                         className="absolute left-2 top-2 rounded bg-red-600/90 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white"
@@ -46,6 +57,15 @@ const ItemCard = ({ item }: ItemCardProps) => {
                         aria-label="Reserved"
                     >
                         Reserved
+                    </span>
+                )}
+
+                {salesClosed && (
+                    <span
+                        className="absolute right-2 top-2 rounded bg-blue-600/90 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white"
+                        aria-label="Sale closed"
+                    >
+                        Sale closed
                     </span>
                 )}
             </div>
@@ -69,7 +89,6 @@ const ItemCard = ({ item }: ItemCardProps) => {
 
             <p>{item.description}</p>
 
-            {/* Optional secondary link for extra clarity */}
             {item.link && (
                 <p className="mt-1">
                     <a
@@ -90,12 +109,23 @@ const ItemCard = ({ item }: ItemCardProps) => {
             <p className="text-gray-500 text-sm">
                 Original price: {item.originalPrice || 'N/A'}
             </p>
-            <p className={item.available ? 'text-green-500' : 'text-red-500'}>
-                {item.available ? 'Available' : 'Sold'}
-            </p>
 
-            {/* Modal */}
-            {isOpen && (
+            {!salesClosed ? (
+                <p
+                    className={
+                        item.available ? 'text-green-500' : 'text-red-500'
+                    }
+                >
+                    {item.available ? 'Available' : 'Sold'}
+                </p>
+            ) : (
+                <p className="text-blue-700 font-medium">
+                    Viewing only — sale closed
+                </p>
+            )}
+
+            {/* Modal (disabled when sale is closed or item is sold) */}
+            {isOpen && !disableInteractions && (
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
                     onClick={() => setIsOpen(false)}
